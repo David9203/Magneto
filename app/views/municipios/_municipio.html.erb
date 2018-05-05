@@ -1,0 +1,20 @@
+<p>
+  <b>Municipio:</b>
+  <%= municipio.name %>
+</p>
+ 
+<p>
+  <b>codigo:</b>
+  <%= municipio.code %>
+</p>
+
+<p>
+  <b>State</b>
+  <%= municipio.state %>
+</p>
+
+<p>
+  <%= link_to 'Destroy Municipio', [municipio.region, municipio],
+               :confirm => 'Are you sure?',
+               :method => :delete %>
+</p>

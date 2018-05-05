@@ -1,0 +1,22 @@
+<%= form_with(model: caracter, local: true) do |form| %>
+  <% if caracter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(caracter.errors.count, "error") %> prohibited this caracter from being saved:</h2>
+
+      <ul>
+      <% caracter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :texto %>
+    <%= form.text_area :texto, id: :caracter_texto %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
